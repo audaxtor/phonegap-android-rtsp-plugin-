@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+	id="rtsp" version="0.0.18">
+	<name>Android RTSP</name>
+	<keywords>RTSP</keywords>
+	<platform name="android">
+		<resource-file src="src/me" target="src/me" />
+		<resource-file src="res/layout/player.xml" target="res/layout/player.xml" />
+		<asset src="js/rtsp.js" target="rtsp.js" />
+		<js-module src="js/rtsp.js" name="player">
+			<clobbers target="rtsp" />
+		</js-module>
+		<config-file target="config.xml" parent="/*">
+			<feature name="RTSP">
+			        <param name="android-package" value="me.plugin.RTSP"/>
+		    </feature>
+		</config-file>
+		<config-file target="AndroidManifest.xml" parent="/manifest/application">
+			<activity android:name="me.activity.PlayerActivity" >
+        	</activity>
+		</config-file>
+		<config-file target="res/values/strings.xml" parent="/resources">
+			<string name="loading">Loading...</string>
+			<string name="loading_failed">Loading Failed</string>
+		</config-file>
+		<config-file target="res/values-zh/strings.xml" parent="/resources">
+			<string name="loading">加载中...</string>
+			<string name="loading_failed">加载失败</string>
+		</config-file>
+	</platform>
+</plugin>
