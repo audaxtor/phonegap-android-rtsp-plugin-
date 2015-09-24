@@ -11,5 +11,5 @@ function play(){
 ```bash
 phonegap platform add android
 phonegap plugin add https://github.com/qwIvan/phonegap-android-rtsp-plugin-.git
-phonegap run
+phonegap run android
 ```
