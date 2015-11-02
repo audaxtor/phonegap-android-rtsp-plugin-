@@ -5,6 +5,6 @@ exports.play = function (uri) {
 		//alert(message);
 	}, function(err) {
 		alert(err);
-	}, "RTSP", "play", uri);
+	}, "RTSP", "play", [uri]);
 };
 
