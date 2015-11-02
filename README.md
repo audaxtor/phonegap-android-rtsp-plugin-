@@ -1,7 +1,7 @@
 ```html
 <script>
 function play(){
-	rtsp.play([document.getElementById("uri").value]);
+	rtsp.play(document.getElementById("uri").value);
 }
 </script>
 <input type="text" id="uri" value="rtsp://123456789"/>
